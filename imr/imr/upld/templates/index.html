@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="dashboard.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: "FILL" 0, "wght" 200, "GRAD" 0, "opsz" 24;
+      padding-left: 35px;
+      padding-top: 8px;
+    }
+  </style>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    body {
+      font-family: "Josefin Sans", sans-serif;
+      background-color: #2a302f;
+    }
+    .header {
+      width: 100%;
+      background-color: black;
+      height: 40px;
+      color: white;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgb(56, 52, 52);
+    }
+    .header h1 {
+      font-size: 1.5em;
+    }
+
+    .header .HisabKitab h1 {
+      position: absolute;
+      margin-top: 10px;
+      margin-left: 60px;
+      font-family: "Josefin Sans", sans-serif;
+    }
+    .header .HisabKitab .calculator {
+      margin-top: 3px;
+      height: 35px;
+      margin-left: 25px;
+      position: absolute;
+    }
+    .sidebar {
+      height: 100vh;
+      width: 230px;
+      background-color: #100f0f;
+    }
+    .HisabKitab {
+      position: relative;
+    }
+    .dashboard {
+      margin-top: 7px;
+    }
+    button {
+      color: white;
+      background-color: #1f1e1d;
+      border-radius: 15px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      height: 40px;
+      width: 100%;
+      margin: 5px 0px;
+      font-size: 1.2rem;
+      font-family: "Josefin Sans", sans-serif;
+    }
+    .subboard1,
+    .subboard2,
+    .secondary {
+      display: flex;
+    }
+    .secondary {
+      width: 100%;
+    }
+    .board {
+      margin: 3px 3px;
+      background-color: #100f0f;
+      color: white;
+      padding: 15px;
+      border-radius: 15px;
+      width: 80vw;
+    }
+    .addExpense1 {
+      background-color: red;
+      width: 150px;
+      border-radius: 15px;
+      margin-left: 35vw;
+    }
+    .addExpense2 {
+      background-color: green;
+      width: 150px;
+      border-radius: 15px;
+      margin-left: 20px;
+    }
+    .totalbalance {
+      width: 2rem;
+    }
+    .youareowed,
+    .youowe,
+    .totalbalance {
+      background-color: #38383b;
+      border-radius: 15px;
+      width: 180px;
+      font-size: 1.5rem;
+      text-align: center;
+      margin-right: 300px;
+      height: 80px;
+    }
+    .youareowed {
+      margin-right: 0px;
+    }
+
+    .maindashboard {
+      display: flex;
+    }
+    .maindashboard h1 {
+      margin-top: 10px;
+      margin-left: 10px;
+    }
+    .subboard2 {
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+    p {
+      margin-top: 13px;
+      margin-bottom: 4px;
+    }
+    .owe {
+      color: red;
+    }
+    .owed {
+      color: rgb(36, 210, 36);
+    }
+    .line {
+      margin-top: 8px;
+      width: 80vw;
+      background-color: grey;
+      height: 1px;
+    }
+    .oneAdd {
+      margin-top: 8px;
+      height: 200px;
+      border-radius: 15px;
+      margin-right: 6px;
+      transition: transform 0.2s ease;
+    }
+    .oneAdd:hover {
+      transform: scale(1.05);
+    }
+    .pictures {
+      display: inline-block;
+      overflow: hidden;
+    }
+
+    .olaAdd {
+      margin-left: 7px;
+    }
+    .tertiary {
+      margin-top: 20px;
+    }
+    .offers {
+      margin-left: 30px;
+      color: white;
+      font-size: 1.5rem;
+    }
+    .socialscore {
+      height: 65px;
+      margin-left: 61vw;
+    }
+    .dashboard {
+      background-color: rgb(72, 71, 71);
+    }
+  </style>
+  <body>
+    <div class="Main">
+      <div class="header">
+        <div class="HisabKitab">
+          <h1>HisabKitab</h1>
+          <span class="material-symbols-outlined"> calculate </span>
+        </div>
+      </div>
+      <div class="secondary">
+        <div class="sidebar">
+          <a href="Dashboard.html">
+            <button class="dashboard leftside">Dashboard</button>
+          </a>
+          <a href="groups">
+            <button class="groups leftside">Groups</button>
+          </a>
+          <a href="friends">
+            <button class="friends leftside">Friends</button>
+          </a>
+        </div>
+        <div>
+          <div class="board">
+            <div class="subboard1">
+              <div class="maindashboard">
+                <h1>Dashboard</h1>
+                <img
+                  class="socialscore"
+                  src="https://i.ibb.co/YjSM9LM/Screenshot-2024-02-25-031459.png"
+                  alt="Screenshot-2024-02-25-031459"
+                  border="0"
+                />
+              </div>
+            </div>
+            <div class="subboard2">
+              <div class="totalbalance">
+                <p>Total Balance</p>
+                <h2>₹300</h2>
+              </div>
+              <div class="youowe">
+                <p>You Owe</p>
+                <h2 class="owe">₹100</h2>
+              </div>
+              <div class="youareowed">
+                <p>You are Owed</p>
+                <h2 class="owed">₹400</h2>
+              </div>
+            </div>
+          </div>
+          <div class="tertiary">
+            <div class="offers">Grab Exciting Offers Now!!!</div>
+            <div class="line"></div>
+            <div class="pictures">
+              <a href="https://www.olacabs.com/">
+                <img
+                  class="oneAdd"
+                  src="https://i.ibb.co/YWwK3Nb/Ola-coupon.jpg"
+                  alt="Ola-coupon"
+                  border="0"
+                />
+              </a>
+              <a href="https://www.dominos.co.in/"
+                ><img
+                  class="oneAdd"
+                  src="https://i.ibb.co/k6SB4Wp/How-Can-Customers-Get-the-Most-Out-of-a-Dominos-Discount-Coupon.jpg"
+                />
+              </a>
+              <a href="https://online.kfc.co.in/">
+                <img
+                  class="oneAdd"
+                  src="https://i.ibb.co/7kCY9Ds/kfc-wednesday-offers-2024.jpg"
+                  alt="kfc-wednesday-offers-2024"
+                  border="0"
+                />
+              </a>
+              <img
+                class="oneAdd"
+                src="https://i.ibb.co/mh6JdZX/Get-two-regular-domino-s-pizzas-for-99-each-and-go-all-out-with-super-amazing-taste-Get-Offer.jpg"
+              />
+              <div class="line"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>

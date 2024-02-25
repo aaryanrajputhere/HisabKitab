@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Expense</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      h1 {
+        color: #333;
+      }
+
+      .container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+        width: 500px;
+      }
+
+      .title,
+      .paidBy,
+      .amount {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+      }
+
+      .input-group {
+        display: flex;
+        align-items: center;
+      }
+
+      .input-group h3 {
+        margin-right: 10px;
+      }
+
+      select,
+      input[type="text"] {
+        padding: 8px;
+        width: 70%;
+        box-sizing: border-box;
+      }
+
+      .split {
+        text-align: center;
+      }
+
+      .member {
+        margin: 5px;
+      }
+
+      button {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+
+      .cancel-button {
+        background-color: #ff3333;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        margin-right: 10px;
+      }
+
+      .cancel-button:hover {
+        background-color: #cc0000;
+      }
+    </style>
+  </head>
+  <body>
+    <form method="post">
+      {% csrf_token %}
+      <center><h1>Expense Details</h1></center>
+      <div class="container">
+        <div class="title input-group">
+          <h3>Title :</h3>
+          <input type="text" placeholder="Expense Name" name="title" />
+        </div>
+        <div class="paidBy input-group">
+          <h3>Paid By :</h3>
+          <input type="text" placeholder="Paid by" name="paidBy" />
+        </div>
+        <div class="amount input-group">
+          <h3>Amount : ₹</h3>
+          <input type="text" placeholder="Amount" name="amount" />
+        </div>
+        <div class="SplitBtw input-group">
+          <h3>Split Between :</h3>
+          <input
+            type="text"
+            placeholder="Aaryan,Vaibhav,Bhava,Irfan"
+            name="SplitBtw"
+          />
+        </div>
+        {% comment %}
+        <div class="split">
+          <h3>Split Between</h3>
+          <div class="member">
+            <input
+              type="checkbox"
+              id="checkboxAaryan"
+              name="members"
+              value="Aaryan"
+            />
+            <label for="checkboxAaryan">Aaryan</label>
+          </div>
+          <div class="member">
+            <input
+              type="checkbox"
+              id="checkboxVaibhav"
+              name="members"
+              value="Vaibhav"
+            />
+            <label for="checkboxVaibhav">Vaibhav</label>
+          </div>
+          <div class="member">
+            <input
+              type="checkbox"
+              id="checkboxBhavya"
+              name="members"
+              value="Bhavya"
+            />
+            <label for="checkboxBhavya">Bhavya</label>
+          </div>
+          <div class="member">
+            <input
+              type="checkbox"
+              id="checkboxIrfan"
+              name="members"
+              value="Irfan"
+            />
+            <label for="checkboxIrfan">Irfan</label>
+          </div>
+        </div>
+        {% endcomment %}
+        <br />
+        <center>
+          <a href="index.html" class="cancel-button">Cancel</a>
+          <button>Add Expense</button>
+        </center>
+      </div>
+    </form>
+  </body>
+</html>
