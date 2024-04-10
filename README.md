@@ -31,7 +31,7 @@ HisabKitab offers a user-friendly frontend built using HTML, CSS, and JS for web
 Open Directory 
 
 ## Getting Started
-2.Starting with the WebApp
+1.Starting with the WebApp
 cd imr
 venv/Scripts/activate
 python manage.py runserver
